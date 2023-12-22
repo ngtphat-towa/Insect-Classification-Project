@@ -1,4 +1,4 @@
-# NKCH_INSECT_DETECTION
+# NKCH_INSECT_RECOGNITION 
 ## Project Title: Building an Insect Recognition Model Based on Images
 ## Introduction
 This project, titled "Building an Insect Recognition Model Based on Images" (Project Code: THS2023-54), aims to develop a model for detecting objects in images using the YOLOv8 model for classification.
