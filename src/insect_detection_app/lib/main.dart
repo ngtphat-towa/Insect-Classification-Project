@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:insect_detection_app/src/core/core.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-import 'themes/color_schemes.g.dart';
-import 'themes/typography.dart';
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-void main() {
+  await Supabase.initialize(
+    url: supabaseUrl,
+    anonKey: supabaseKey,
+  );
   runApp(const MyApp());
 }
 
@@ -16,15 +22,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: lightColorScheme,
-        textTheme: textTheme,
+        textTheme: GoogleFonts.robotoMonoTextTheme(),
       ),
-      darkTheme: ThemeData(
-        useMaterial3: true,
-        colorScheme: darkColorScheme,
-        textTheme: textTheme,
-      ),
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
